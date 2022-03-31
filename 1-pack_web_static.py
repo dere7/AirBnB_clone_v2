@@ -2,6 +2,7 @@
 from fabric.api import local
 from datetime import datetime
 
+
 def do_pack():
     """generates a .tgz archive"""
     now = datetime.now().strftime('%Y%m%d%H%M%S')
