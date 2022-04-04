@@ -49,4 +49,6 @@ def do_clean(number=0):
     """deletes out-of-date archives"""
     with lcd('versions'):
         local('pwd')
-        local("rm \"$(ls -t | tail -{} | tr '\n' ' ' )\"".format(number))
+        if number == 0:
+            number = 1
+        local("ls -tp | grep -v '/$' | tail -n +{}".format(number + 1) + " | xargs -I \{} rm -- \{}")
