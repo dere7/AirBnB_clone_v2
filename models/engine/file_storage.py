@@ -54,3 +54,7 @@ class FileStorage:
                 if o is obj:
                     del FileStorage.__objects[self.__key(obj)]
                     break
+
+    def close(self):
+        """reloads before closing"""
+        self.reload()
