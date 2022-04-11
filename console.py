@@ -220,7 +220,7 @@ class HBNBCommand(cmd.Cmd):
             for k, v in storage.all().items():
                 print_list.append(str(v))
 
-        print(f"[{', '.join(print_list)}]")
+        print("[{}]".format(', '.join(print_list)))
 
     def help_all(self):
         """ Help information for the all command """
