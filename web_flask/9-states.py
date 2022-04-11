@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""starts a Flask web application"""
+""" lists all states and individual state """
 from models.state import State
 from flask import Flask, render_template
 from models import storage

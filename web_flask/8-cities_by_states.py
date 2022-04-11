@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""starts a Flask web application"""
+""" Contains flask web application that displays city by state """
 from models.state import State
 from flask import Flask, render_template
 from models import storage
